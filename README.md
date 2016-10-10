@@ -121,8 +121,9 @@ require("./loader!./dir/file.txt");
 # 使用jade-loader编译当前目录下的template.jade模版
 require("jade!./template.jade");
 
-#从后向前解析，多个解析方式第一个加！
-# 编译bootstrop目录下的less文件夹中的bootstrap.less文件，然后使用css-loader转化导入文件，最后使用style-loader输出到DOM中
+# 从后向前解析，多个解析方式第一个加！
+# 编译bootstrop目录下的less文件夹中的bootstrap.less文件，然后使用css-loader转化导入文件，
+# 最后使用style-loader输出到DOM中
 require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
 
