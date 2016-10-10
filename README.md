@@ -112,7 +112,7 @@ $ webpack --progress --colors --watch
 
 *loader引入方式*
 
-`使用require引入loader`
+* 使用require引入loader
 
 ```
 # 使用loader.js转化到dir目录下的file.txt文件
@@ -127,7 +127,7 @@ require("jade!./template.jade");
 require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
 
-`configuration方式`
+* configuration方式
 
 ```
 {
