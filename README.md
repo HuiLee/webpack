@@ -24,15 +24,20 @@
 ```
 
 > cd webpack && cat entry.js
+
 > echo "document.write('It works.');" >> entry.js 
+
 > webpack ./entry.js bundle.js
 
 
 多文件编译：
 
 > vim content.js
+
 > echo "document.write('\<br\>');" >> content.js;
+
 > echo "module.exports = 'It works from content.js.'" >> content.js;
+
 > webpack ./entry.js bundle.js
 
 CSS文件编译：
