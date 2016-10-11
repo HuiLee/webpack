@@ -141,4 +141,30 @@ require("!style!css!less!bootstrap/less/bootstrap.less");
 
 ```
 
+
+*支持Babel*
+
+```
+# 根目录下创建.babelrc文件
+$ cat .babelrc
+$ echo { "presets": [ "es2015" ] } >> .babelrc
+----------------------------------------------
+# 配置webpack使用babel处理所有的JS文件
+ module.exports = {
+     entry: './src/app.js',
+     output: {
+         path: './bin',
+         filename: 'app.bundle.js',
+     },
+     module: {
+         loaders: [{
+             test: /\.js$/,
+             exclude: /node_modules/,
+             loader: 'babel'
+         }]
+     }
+ }
+```
+
+
 (Loaders)[https://webpack.github.io/docs/list-of-loaders.html]
