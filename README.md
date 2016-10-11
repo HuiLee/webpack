@@ -142,7 +142,7 @@ require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
 
 
-*支持Babel*
+*转化ES2015使用支持Babel*
 
 ```
 # 根目录下创建.babelrc文件
@@ -166,5 +166,34 @@ $ echo { "presets": [ "es2015" ] } >> .babelrc
  }
 ```
 
+*使用plugins*
 
+```
+const webpack = require('webpack');
+
+module.exports = {
+    entry: './src/app.js',
+    output: {
+        path: './bin',
+        filename: 'app.bundle.js',
+    },
+    module: {
+        loaders: [{
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+        }]
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+            },
+            output: {
+                comments: false,
+            },
+        }),
+    ]
+}
+```
 (Loaders)[https://webpack.github.io/docs/list-of-loaders.html]
