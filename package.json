@@ -1,0 +1,27 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "webpack",
+  "main": "bundle.js",
+  "dependencies": {
+    "css-loader": "^0.25.0",
+    "style-loader": "^0.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuiLee/webpack.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Hui Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HuiLee/webpack/issues"
+  },
+  "homepage": "https://github.com/HuiLee/webpack#readme"
+}

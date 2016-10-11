@@ -47,6 +47,7 @@
 	//使用style-loader && css-loader编译器
 	//require("!style!css!./style.css");
 	//脚本编译执行
+
 	__webpack_require__(1);
 	document.write('It works.');
 	document.write('<br>');
