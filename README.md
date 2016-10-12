@@ -8,9 +8,9 @@
 $ npm install webpack -g
 ```
 
-### 使用
+### 演示
 
-单文件编译:
+单文件编译
 
 ```
 $ cat index.html
@@ -35,7 +35,7 @@ $ echo "document.write('It works.');" >> entry.js
 $ webpack ./entry.js bundle.js
 ```
 
-多文件编译：
+多文件编译
 
 ```
 $ vim content.js
@@ -50,7 +50,7 @@ $ webpack ./entry.js bundle.js
 ```
 
 
-CSS样式编译：
+CSS样式编译
 
 * css-loader : 解决加载进来的CSS样式导入问题，常见的比如url
 * style-loader : 以style样式标签的形式导出到DOM中
@@ -67,9 +67,9 @@ $ webpack ./entry.js bundle.js
 ```
 
 
-###Loaders
+引入Loaders
 
-*绑定脚本*
+* 绑定脚本
 
 
 ```
@@ -86,7 +86,7 @@ document.write(require('./content.js'));
 $  webpack ./entry.js bundle.js --module-bind 'css=style!css'
 ```
 
-*使用配置文件*
+* 使用配置文件
 
 ```
 $ cat webpack.config.js
@@ -110,7 +110,7 @@ $ webpack --progress --colors
 $ webpack --progress --colors --watch
 ```
 
-*loader引入方式*
+* loader引入方式
 
 * 使用require引入loader
 
@@ -142,7 +142,7 @@ require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
 
 
-*转化ES2015使用支持Babel*
+* 转化ES2015使用支持Babel
 
 ```
 # 根目录下创建.babelrc文件
@@ -166,7 +166,7 @@ $ echo { "presets": [ "es2015" ] } >> .babelrc
  }
 ```
 
-*使用plugins*
+* 使用plugins
 
 ```
 const webpack = require('webpack');
@@ -197,7 +197,7 @@ module.exports = {
 }
 ```
 
-## 使用场景
+## 使用场景分析
 
 *webpack在Laravel5.3中的应用*
 
