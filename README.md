@@ -196,4 +196,16 @@ module.exports = {
     ]
 }
 ```
+
+## 使用场景
+
+*webpack在Laravel5.3中的应用*
+
+*webpack在React Native中的应用*
+
+*webpack在Angular2中的应用*
+
+*webpack在Vue中的应用*
+
+
 (Loaders)[https://webpack.github.io/docs/list-of-loaders.html]
