@@ -138,8 +138,7 @@ configuration方式引入loader
 
 ```
 
-
-* 转化ES2015使用支持Babel
+转化ES2015使用支持Babel
 
 ```
 # 根目录下创建.babelrc文件
@@ -163,7 +162,7 @@ $ echo { "presets": [ "es2015" ] } >> .babelrc
  }
 ```
 
-* 使用plugins
+使用plugins
 
 ```
 const webpack = require('webpack');
