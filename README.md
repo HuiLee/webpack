@@ -67,9 +67,7 @@ $ webpack ./entry.js bundle.js
 ```
 
 
-引入Loaders
-
-* 绑定脚本
+绑定脚本
 
 
 ```
@@ -86,7 +84,7 @@ document.write(require('./content.js'));
 $  webpack ./entry.js bundle.js --module-bind 'css=style!css'
 ```
 
-* 使用配置文件
+使用配置文件
 
 ```
 $ cat webpack.config.js
@@ -111,7 +109,7 @@ $ webpack --progress --colors --watch
 ```
 
 
-* 使用require引入loader
+使用require引入loader
 
 ```
 # 使用loader.js转化到dir目录下的file.txt文件
@@ -126,7 +124,7 @@ require("jade!./template.jade");
 require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
 
-* configuration方式引入loader
+configuration方式引入loader
 
 ```
 {
