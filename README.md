@@ -110,7 +110,6 @@ $ webpack --progress --colors
 $ webpack --progress --colors --watch
 ```
 
-* loader引入方式
 
 * 使用require引入loader
 
@@ -127,7 +126,7 @@ require("jade!./template.jade");
 require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
 
-* configuration方式
+* configuration方式引入loader
 
 ```
 {
@@ -199,13 +198,28 @@ module.exports = {
 
 ## 使用场景分析
 
-*webpack在Laravel5.3中的应用*
+webpack在Laravel5.3中的应用
 
-*webpack在React Native中的应用*
+webpack在React Native中的应用
 
-*webpack在Angular2中的应用*
+webpack在Angular2中的应用
 
-*webpack在Vue中的应用*
+webpack在Vue中的应用
 
+## 调试
+
+```
+$ npm i webpack-dev-server --save
+----------------------------------------------
+添加脚本服务webpack-dev-server（http://localhost:8080）
+{
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+  }
+}
+
+
+```
 
 (Loaders)[https://webpack.github.io/docs/list-of-loaders.html]
