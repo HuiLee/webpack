@@ -53,9 +53,13 @@ $ webpack ./entry.js bundle.js
 CSS样式编译
 
 * css-loader : 解决加载进来的CSS样式导入问题，常见的比如url
+
 * style-loader : 以style样式标签的形式导出到DOM中
+
 * less-loader : 加载编译less文件
+
 * sass-loader: 加载编译sass文件
+
 * 多个loader一起使用用!关联起来
 
 ```
@@ -72,11 +76,14 @@ $ webpack ./entry.js bundle.js
 
 ```
 entry.js
+
 -----------------------------------------
+
 require("./style.css");
 document.write('It works.');
 document.write('<br>');
 document.write(require('./content.js'));
+
 -----------------------------------------
 ```
 
@@ -88,7 +95,9 @@ $  webpack ./entry.js bundle.js --module-bind 'css=style!css'
 
 ```
 $ cat webpack.config.js
+
 -----------------------------------------
+
 module.exports = {
     entry: "./entry.js",
     output: {
@@ -101,10 +110,15 @@ module.exports = {
         ]
     }
 };
+
 -----------------------------------------
+
 # 输出进度
+
 $ webpack --progress --colors
+
 # 输出进度，同时监控
+
 $ webpack --progress --colors --watch
 ```
 
@@ -113,14 +127,19 @@ $ webpack --progress --colors --watch
 
 ```
 # 使用loader.js转化到dir目录下的file.txt文件
+
 require("./loader!./dir/file.txt");
 
 # 使用jade-loader编译当前目录下的template.jade模版
+
 require("jade!./template.jade");
 
 # 从后向前解析，多个解析方式第一个加！
+
 # 编译bootstrop目录下的less文件夹中的bootstrap.less文件，然后使用css-loader转化导入文件，
+
 # 最后使用style-loader输出到DOM中
+
 require("!style!css!less!bootstrap/less/bootstrap.less");
 ```
 
@@ -142,10 +161,15 @@ configuration方式引入loader
 
 ```
 # 根目录下创建.babelrc文件
+
 $ cat .babelrc
+
 $ echo { "presets": [ "es2015" ] } >> .babelrc
+
 ----------------------------------------------
+
 # 配置webpack使用babel处理所有的JS文件
+
  module.exports = {
      entry: './src/app.js',
      output: {
@@ -207,7 +231,9 @@ webpack在Vue中的应用
 
 ```
 $ npm i webpack-dev-server --save
+
 ----------------------------------------------
+
 添加脚本服务webpack-dev-server（http://localhost:8080）
 {
   "scripts": {
@@ -215,8 +241,6 @@ $ npm i webpack-dev-server --save
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
   }
 }
-
-
 ```
 
 (Loaders)[https://webpack.github.io/docs/list-of-loaders.html]
