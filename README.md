@@ -4,7 +4,7 @@
 
 ### 安装
 
-```shell
+```bash
 $ npm install webpack -g
 ```
 
@@ -12,11 +12,11 @@ $ npm install webpack -g
 
 单文件编译
 
-```
+```bash
 $ cat index.html
 ```
 
-```
+```html
 <html>
     <head>
         <meta charset="utf-8">
@@ -27,7 +27,7 @@ $ cat index.html
 </html>
 ```
 
-```
+```bash
 $ cd webpack && cat entry.js
 
 $ echo "document.write('It works.');" >> entry.js 
@@ -37,7 +37,7 @@ $ webpack ./entry.js bundle.js
 
 多文件编译
 
-```
+```bash
 $ vim content.js
 
 $ echo "document.write('\<br\>');" >> content.js;
@@ -62,7 +62,7 @@ CSS样式编译
 
 * 多个loader一起使用用!关联起来
 
-```
+```bash
 $ npm install css-loader style-loader --save
 
 $ echo "require('!style!css!./style.css')" >> entry.js
@@ -74,7 +74,7 @@ $ webpack ./entry.js bundle.js
 绑定脚本
 
 
-```
+```js
 entry.js
 
 -----------------------------------------
@@ -87,13 +87,13 @@ document.write(require('./content.js'));
 -----------------------------------------
 ```
 
-```
+```bash
 $  webpack ./entry.js bundle.js --module-bind 'css=style!css'
 ```
 
 使用配置文件
 
-```
+```js
 $ cat webpack.config.js
 
 -----------------------------------------
@@ -125,7 +125,7 @@ $ webpack --progress --colors --watch
 
 使用require引入loader
 
-```
+```js
 # 使用loader.js转化到dir目录下的file.txt文件
 
 require("./loader!./dir/file.txt");
@@ -145,7 +145,7 @@ require("!style!css!less!bootstrap/less/bootstrap.less");
 
 configuration方式引入loader
 
-```
+```js
 {
     module: {
         loaders: [
@@ -159,7 +159,7 @@ configuration方式引入loader
 
 转化ES2015使用支持Babel
 
-```
+```bash
 # 根目录下创建.babelrc文件
 
 $ cat .babelrc
@@ -188,7 +188,7 @@ $ echo { "presets": [ "es2015" ] } >> .babelrc
 
 使用plugins
 
-```
+```bash
 const webpack = require('webpack');
 
 module.exports = {
@@ -229,7 +229,7 @@ webpack在Vue中的应用
 
 ## 调试
 
-```shell
+```bash
 $ npm i webpack-dev-server --save
 
 ----------------------------------------------
