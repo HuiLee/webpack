@@ -229,12 +229,12 @@ webpack在Vue中的应用
 
 ## 调试
 
-```bash
+```js
 $ npm i webpack-dev-server --save
 
 ----------------------------------------------
 
-添加脚本服务webpack-dev-server（http://localhost:8080）
+//添加脚本服务webpack-dev-server（http://localhost:8080）
 {
   "scripts": {
     "build": "webpack",
