@@ -4,7 +4,7 @@
 
 ### 安装
 
-```
+```shell
 $ npm install webpack -g
 ```
 
@@ -229,7 +229,7 @@ webpack在Vue中的应用
 
 ## 调试
 
-```
+```shell
 $ npm i webpack-dev-server --save
 
 ----------------------------------------------
